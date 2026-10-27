@@ -1,0 +1,8 @@
+tensorflow==2.16.2
+numpy==1.26.4
+matplotlib==3.11.2
+scikit-learn==1.9.1
+Pillow==11.3.0
+gradio==5.49.1
+mediapipe==0.10.21
+opencv-contrib-python==4.11.0.86
