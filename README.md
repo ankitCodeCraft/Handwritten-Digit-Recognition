@@ -6,12 +6,12 @@ A deep-learning project that recognizes handwritten digits using CNN, ResNet, VG
 
 This project explores handwritten digit recognition using four deep-learning architectures. The models are trained and evaluated on the MNIST dataset to compare their classification performance and model complexity.
 
-The project also includes an interactive application that supports image uploads, mouse-based drawing, webcam-based air drawing, multi-digit recognition, and prediction confidence display.
+The interactive application supports image uploads, mouse-based drawing, webcam-based air drawing, multi-digit recognition, and prediction confidence display.
 
 ## Key Features
 
 - Handwritten digit classification from 0 to 9
-- Four-model comparison: CNN, ResNet-style, VGG-style, and EfficientNetB0
+- Comparison of CNN, ResNet-style, VGG-style, and EfficientNetB0 models
 - Image upload and prediction
 - Interactive mouse drawing
 - Webcam-based air drawing
@@ -54,28 +54,29 @@ The project uses the MNIST handwritten digit dataset through TensorFlow/Keras.
 - MediaPipe
 - Pillow
 
-## Project Structure
+## Project Architecture
 
-```text
-HandWritten Digit Recognition/
-├── src/
-│   ├── models/
-│   │   ├── cnn_model.py
-│   │   ├── handwritten_digit_cnn.keras
-│   │   ├── handwritten_digit_resnet.keras
-│   │   ├── handwritten_digit_vgg.keras
-│   │   └── handwritten_digit_efficientnet.keras
-│   ├── results/
-│   ├── app.py
-│   ├── air_draw.py
-│   ├── train.py
-│   ├── predict.py
-│   ├── compare_models.py
-│   └── plot_model_comparison.py
-├── Handwritten_Digit_Recognition_CNN.ipynb
-├── requirements.txt
-└── README.md
-```
+![Model Architecture](src/results/figure_4_1_architecture.png)
+
+## Recognition Pipeline
+
+![Recognition Pipeline Flowchart](src/results/figure_4_2_pipeline_flowchart.png)
+
+## Digit Preprocessing
+
+![Digit Preprocessing](src/results/figure_4_3_digit_preprocessing.png)
+
+## Air Drawing State Machine
+
+![Air Drawing State Machine](src/results/figure_4_4_air_drawing_statemachine.png)
+
+## Model Architectures
+
+![Model Architecture Comparison](src/results/figure_4_5_model_architectures.png)
+
+## Application Interface
+
+![Gradio Application Interface](src/results/figure_5_1_gradio_ui.png)
 
 ## Installation
 
@@ -123,7 +124,23 @@ python src/plot_model_comparison.py
 
 The comparison script generates a CSV file containing evaluation metrics. The plotting script saves accuracy and macro F1-score comparison graphs in `src/results/`.
 
-## Results
+## Results and Visualizations
+
+### Accuracy Comparison
+
+![Accuracy Comparison](src/results/accuracy_comparison.png)
+
+### Macro F1-Score Comparison
+
+![F1-Score Comparison](src/results/f1_comparison.png)
+
+### VGG-Style Model Confusion Matrix
+
+![VGG Confusion Matrix](src/results/vgg_confusion_matrix.png)
+
+### EfficientNetB0 Confusion Matrix
+
+![EfficientNetB0 Confusion Matrix](src/results/efficientnet_confusion_matrix.png)
 
 The experiments show that the custom VGG-style model performs best among the four evaluated models on the MNIST test dataset. EfficientNetB0 has substantially more parameters but achieves lower test accuracy in this experimental setup.
 
